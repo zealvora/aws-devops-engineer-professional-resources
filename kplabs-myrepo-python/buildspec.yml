@@ -1,0 +1,17 @@
+version: 0.2 
+ 
+phases: 
+  install: 
+    runtime-versions: 
+      python: 3.7 
+  build: 
+    commands: 
+      - echo Compiling has started 
+      - echo Compiling the Python code... 
+      - python HelloWorld.py 
+  post_build: 
+    commands: 
+      - echo Compiling process has been completed 
+artifacts: 
+  files: 
+    - HelloWorld.py 
