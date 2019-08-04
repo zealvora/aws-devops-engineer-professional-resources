@@ -1,4 +1,3 @@
-Edit
 #include <iostream> 
  
 int main() 
