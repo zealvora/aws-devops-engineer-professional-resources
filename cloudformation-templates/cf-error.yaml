@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: VPC in North Virginia
+Resurces:
+ MyVPC:
+  Type: AWS::EC2::VPC
+  Properties:
+    CidrBlock: "10.77.0.0/16"
+    InstanceTenancy: default
+    Tags:
+       - Key: Name
+         Value: CFVPC
+       - Key: Environment
+         Value: Demo
+ MySubnet:
+   Type: AWS::EC2::Subnet
+   Properties:
+     AvailabilityZone: us-east-1a
+     CidrBlock: "10.77.1.0/24"
+     Tags:
+       - Key: Name
+         Value: MySubnet1a
+     VpcId: !Ref MyVPC
