@@ -1,0 +1,8 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Simple EC2 Instance"
+Resources: 
+  MyEC2Instance: 
+     Type: AWS::EC2::Instance
+     Properties: 
+        ImageId: "ami-0b84d2c53ad5250c2"
+        InstanceType: "m5.large"
