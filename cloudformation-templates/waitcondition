@@ -1,0 +1,15 @@
+Resources:
+  Ec2Instance:
+    Type: "AWS::EC2::Instance"
+    Properties:
+      ImageId: ami-0b898040803850657
+
+    PrivateWaitHandle:
+      Type: AWS::CloudFormation::WaitConditionHandle
+
+    PrivateWaitCondition:
+      Type: AWS::CloudFormation::WaitCondition
+      Properties:
+        Handle: !Ref PrivateWaitHandle
+        Timeout: '3600'
+        Count: 1
