@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Simple EC2 Instance"
+Resources: 
+  MyEC2Instance: 
+     Type: AWS::EC2::Instance
+     Properties: 
+        ImageId: "ami-06bcd1131b2f55803"
+        InstanceType: !Ref InstanceTypeParameter
+Parameters: 
+  InstanceTypeParameter: 
+    Type: String
+    Default: t2.micro
+    AllowedValues: 
+      - t2.micro
+      - m1.small
+      - m1.large
+    Description: Enter t2.micro, m1.small, or m1.large. Default is t2.micro.
