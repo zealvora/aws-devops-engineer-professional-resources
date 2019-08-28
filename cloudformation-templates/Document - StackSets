@@ -1,0 +1,22 @@
+ROLE NAMES
+
+Role Name for Admin Account: AWSCloudFormationStackSetAdministrationRole
+
+Role Name for Dest Account: AWSCloudFormationStackSetExecutionRole
+
+IAM POLICY
+
+{  
+   "Version":"2012-10-17",
+   "Statement":[  
+      {  
+         "Action":[  
+            "sts:AssumeRole"
+         ],
+         "Resource":[  
+            "arn:aws:iam::*:role/AWSCloudFormationStackSetExecutionRole"
+         ],
+         "Effect":"Allow"
+      }
+   ]
+}
