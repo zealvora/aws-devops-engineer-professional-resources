@@ -1,0 +1,8 @@
+{
+    "Resources": {
+        "S3B3CGGQ": {
+            "Type": "AWS::S3::Bucket",
+            "DeletionPolicy": "Retain"
+        }
+    }
+}
